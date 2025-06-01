@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    max-width: 750px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.exercicio {
+    background-color: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+.exercicio h2 {
+    margin-top: 0;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px;
+    font-size: 1.5em;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 0.95em;
+}
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.input-group label {
+    margin-bottom: 0;
+    align-self: center;
+}
+.input-group input {
+    flex-grow: 1;
+    min-width: 70px;
+    margin-bottom: 5px;
+}
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+}
+button:hover {
+    background-color: #218838;
+}
+.resultado {
+    margin-top: 18px;
+    padding: 12px;
+    background-color: #eef7ff;
+    border: 1px solid #cce0ff;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+    min-height: 22px;
+    word-wrap: break-word;
+    font-size: 0.95em;
+}
+.resultado.error-display {
+    border-left-color: #c00;
+    background-color: #ffeeee;
+    color: #c00;
+}
