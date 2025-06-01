@@ -2,78 +2,116 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Funções JavaScript Interativas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções JavaScript Interativas e Acessíveis</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main class="container">
+        <header>
+            <h1>Atividade JavaScript</h1>
+        </header>
 
-    <div class="container">
-        <h1>Painel de Funções JavaScript ⚙️</h1>
-
-        <div class="exercicio">
-            <h2>1) Maior e Menor Valor</h2>
+        <section class="exercicio" aria-labelledby="titulo-ex1">
+            <h2 id="titulo-ex1">1) Maior e Menor Valor</h2>
             <p>Insira cinco valores inteiros para encontrar o maior e o menor.</p>
-            <div class="input-group">
-                <label for="ex1_num1">N1:</label><input type="number" id="ex1_num1" placeholder="Valor 1">
-                <label for="ex1_num2">N2:</label><input type="number" id="ex1_num2" placeholder="Valor 2">
-                <label for="ex1_num3">N3:</label><input type="number" id="ex1_num3" placeholder="Valor 3">
-                <label for="ex1_num4">N4:</label><input type="number" id="ex1_num4" placeholder="Valor 4">
-                <label for="ex1_num5">N5:</label><input type="number" id="ex1_num5" placeholder="Valor 5">
+            <div class="form-grid">
+                <div>
+                    <label for="ex1_num1">Número 1:</label>
+                    <input type="number" id="ex1_num1" placeholder="Valor 1">
+                </div>
+                <div>
+                    <label for="ex1_num2">Número 2:</label>
+                    <input type="number" id="ex1_num2" placeholder="Valor 2">
+                </div>
+                <div>
+                    <label for="ex1_num3">Número 3:</label>
+                    <input type="number" id="ex1_num3" placeholder="Valor 3">
+                </div>
+                <div>
+                    <label for="ex1_num4">Número 4:</label>
+                    <input type="number" id="ex1_num4" placeholder="Valor 4">
+                </div>
+                <div>
+                    <label for="ex1_num5">Número 5:</label>
+                    <input type="number" id="ex1_num5" placeholder="Valor 5">
+                </div>
             </div>
             <button id="btn_ex1">Calcular Maior/Menor</button>
-            <div class="resultado" id="res_ex1">Aguardando entrada...</div>
-        </div>
+            <div class="resultado" id="res_ex1" aria-live="polite">Aguardando entrada...</div>
+        </section>
 
-        <div class="exercicio">
-            <h2>2) Verificar Vogal</h2>
+        <section class="exercicio" aria-labelledby="titulo-ex2">
+            <h2 id="titulo-ex2">2) Verificar Vogal</h2>
             <p>Digite um caractere para verificar se é uma vogal (retorna 1 para vogal, 0 para não vogal).</p>
-            <label for="ex2_char">Caractere:</label>
-            <input type="text" id="ex2_char" maxlength="1" placeholder="Digite um único caractere">
+            <div>
+                <label for="ex2_char">Caractere:</label>
+                <input type="text" id="ex2_char" maxlength="1" placeholder="Digite um único caractere">
+            </div>
             <button id="btn_ex2">Verificar Vogal</button>
-            <div class="resultado" id="res_ex2">Aguardando entrada...</div>
-        </div>
+            <div class="resultado" id="res_ex2" aria-live="polite">Aguardando entrada...</div>
+        </section>
 
-        <div class="exercicio">
-            <h2>3) Pares em Intervalo e Somatório</h2>
+        <section class="exercicio" aria-labelledby="titulo-ex3">
+            <h2 id="titulo-ex3">3) Pares em Intervalo e Somatório</h2>
             <p>Insira o limite inferior e superior de um intervalo. Serão impressos os números pares no intervalo aberto e seu somatório.</p>
-            <div class="input-group">
-                <label for="ex3_li">Limite Inferior:</label><input type="number" id="ex3_li" placeholder="Início">
-                <label for="ex3_ls">Limite Superior:</label><input type="number" id="ex3_ls" placeholder="Fim">
+            <div class="form-grid form-grid-two-cols">
+                 <div>
+                    <label for="ex3_li">Limite Inferior:</label>
+                    <input type="number" id="ex3_li" placeholder="Início">
+                </div>
+                <div>
+                    <label for="ex3_ls">Limite Superior:</label>
+                    <input type="number" id="ex3_ls" placeholder="Fim">
+                </div>
             </div>
             <button id="btn_ex3">Mostrar Pares e Soma</button>
-            <div class="resultado" id="res_ex3">Aguardando entrada...</div>
-        </div>
+            <div class="resultado" id="res_ex3" aria-live="polite">Aguardando entrada...</div>
+        </section>
 
-        <div class="exercicio">
-            <h2>4) Ordenar 3 Valores</h2>
+        <section class="exercicio" aria-labelledby="titulo-ex4">
+            <h2 id="titulo-ex4">4) Ordenar 3 Valores</h2>
             <p>Insira três valores inteiros para retorná-los em ordem crescente.</p>
-            <div class="input-group">
-                <label for="ex4_valA">Valor A:</label><input type="number" id="ex4_valA" placeholder="Valor A">
-                <label for="ex4_valB">Valor B:</label><input type="number" id="ex4_valB" placeholder="Valor B">
-                <label for="ex4_valC">Valor C:</label><input type="number" id="ex4_valC" placeholder="Valor C">
+            <div class="form-grid form-grid-three-cols">
+                <div>
+                    <label for="ex4_valA">Valor A:</label>
+                    <input type="number" id="ex4_valA" placeholder="Valor A">
+                </div>
+                <div>
+                    <label for="ex4_valB">Valor B:</label>
+                    <input type="number" id="ex4_valB" placeholder="Valor B">
+                </div>
+                <div>
+                    <label for="ex4_valC">Valor C:</label>
+                    <input type="number" id="ex4_valC" placeholder="Valor C">
+                </div>
             </div>
             <button id="btn_ex4">Ordenar Valores</button>
-            <div class="resultado" id="res_ex4">Aguardando entrada...</div>
-        </div>
+            <div class="resultado" id="res_ex4" aria-live="polite">Aguardando entrada...</div>
+        </section>
 
-        <div class="exercicio">
-            <h2>5) Verificar Positivo/Negativo</h2>
+        <section class="exercicio" aria-labelledby="titulo-ex5">
+            <h2 id="titulo-ex5">5) Verificar Positivo/Negativo</h2>
             <p>Insira um valor inteiro para verificar se é positivo (retorna true) ou não (retorna false).</p>
-            <label for="ex5_numX">Número:</label>
-            <input type="number" id="ex5_numX" placeholder="Digite um número">
+            <div>
+                <label for="ex5_numX">Número:</label>
+                <input type="number" id="ex5_numX" placeholder="Digite um número">
+            </div>
             <button id="btn_ex5">Verificar Positivo</button>
-            <div class="resultado" id="res_ex5">Aguardando entrada...</div>
-        </div>
+            <div class="resultado" id="res_ex5" aria-live="polite">Aguardando entrada...</div>
+        </section>
 
-        <div class="exercicio">
-            <h2>6) Verificar Par/Ímpar</h2>
+        <section class="exercicio" aria-labelledby="titulo-ex6">
+            <h2 id="titulo-ex6">6) Verificar Par/Ímpar</h2>
             <p>Insira um valor inteiro para verificar se é par (retorna true) ou ímpar (retorna false).</p>
-            <label for="ex6_numY">Número:</label>
-            <input type="number" id="ex6_numY" placeholder="Digite um número">
+            <div>
+                <label for="ex6_numY">Número:</label>
+                <input type="number" id="ex6_numY" placeholder="Digite um número">
+            </div>
             <button id="btn_ex6">Verificar Par/Ímpar</button>
-            <div class="resultado" id="res_ex6">Aguardando entrada...</div>
-        </div>
-    </div>
+            <div class="resultado" id="res_ex6" aria-live="polite">Aguardando entrada...</div>
+        </section>
+    </main>
 
     <script src="script.js" defer></script>
 </body>

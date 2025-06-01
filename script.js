@@ -168,7 +168,7 @@ document.getElementById('btn_ex6').addEventListener('click', function() {
     }
     
     if (!Number.isInteger(numY)) {
-         exibirMensagem(resDiv, `O número ${numY} não é inteiro. A verificação de par/ímpar é usualmente para inteiros. <br>Considerando a parte inteira (${Math.trunc(numY)}): ${Math.trunc(numY)} <strong>é ${PAR_IMPAR_FUNC(Math.trunc(numY)) ? "Par" : "Ímpar"}</strong>.`, "erro");
+         exibirMensagem(resDiv, `O número ${numY} não é um inteiro válido para esta operação. <br>Considerando a parte inteira (${Math.trunc(numY)}): ${Math.trunc(numY)} <strong>é ${PAR_IMPAR_FUNC(Math.trunc(numY)) ? "Par" : "Ímpar"}</strong>.`, "erro");
          return;
     }
 
