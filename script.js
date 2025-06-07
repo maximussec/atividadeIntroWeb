@@ -97,7 +97,7 @@ document.getElementById('btn_ex2').addEventListener('click', function() {
         return;
     }
     const resultado = VOGAL_FUNC(charInput);
-    exibirMensagem(resDiv, `O caractere '${charInput[0]}' ${resultado === 1 ? "<strong>É uma vogal</strong> (retorno: 1)" : "<strong>NÃO é uma vogal</strong> (retorno: 0)"}.`);
+    exibirMensagem(resDiv, `O caractere '${charInput[0]}' ${resultado === 1 ? "<strong>É uma vogal</strong>" : "<strong>NÃO é uma vogal</strong>"}.`);
 });
 
 document.getElementById('btn_ex3').addEventListener('click', function() {
@@ -148,11 +148,11 @@ document.getElementById('btn_ex5').addEventListener('click', function() {
     const ehPositivo = POSITIVO_NEGATIVO_FUNC(numX);
     let mensagem;
     if (ehPositivo) {
-        mensagem = `O número ${numX} <strong>é positivo</strong>. (Função retornou: ${ehPositivo})`;
+        mensagem = `O número ${numX} <strong>é positivo</strong>.`;
     } else if (numX < 0) {
-        mensagem = `O número ${numX} <strong>é negativo</strong>. (Função retornou: ${ehPositivo})`;
+        mensagem = `O número ${numX} <strong>é negativo</strong>.`;
     } else {
-         mensagem = `O número ${numX} <strong>é zero</strong>. (Função retornou: ${ehPositivo})`;
+         mensagem = `O número ${numX} <strong>é zero</strong>.`;
     }
     exibirMensagem(resDiv, mensagem);
 });
@@ -173,5 +173,5 @@ document.getElementById('btn_ex6').addEventListener('click', function() {
     }
 
     const ehPar = PAR_IMPAR_FUNC(numY);
-    exibirMensagem(resDiv, `O número ${numY} <strong>é ${ehPar ? "Par" : "Ímpar"}</strong>. (Função retornou: ${ehPar})`);
+    exibirMensagem(resDiv, `O número ${numY} <strong>é ${ehPar ? "Par" : "Ímpar"}</strong>.`);
 });
