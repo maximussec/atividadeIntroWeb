@@ -1,0 +1,313 @@
+:root {
+  
+    --text-color: #e0e0e0; 
+    --text-desc-color: #e5e5e5; 
+    --primary-highlight-color: #ffffff; 
+    
+    --input-bg-color: #222;
+    --input-text-color: #fff;
+    --input-border-color: #2e2e2e;
+    --input-focus-bg-color: #111;
+    --input-focus-shadow-color: rgba(255,255,255,.15); 
+    --input-focus-border-color: rgba(255,255,255,.25);
+
+
+    --button-bg-color: rgba(30,30,30,.8);
+    --button-text-color: white;
+    --button-hover-bg-color: rgba(255,255,255,.25);
+    --button-hover-shadow-color: rgba(255,255,255,.12);
+    --button-focus-outline-color: #fff;
+
+    --card-border-color: #2e2e2e;
+    --card-shadow-color: rgba(255,255,255,.15);
+    
+    --result-bg-color: rgba(255, 255, 255, 0.05);
+    --result-border-color: var(--card-border-color);
+    --result-text-strong-color: var(--primary-highlight-color);
+
+    --result-error-bg-color: rgba(217, 83, 79, 0.1);
+    --result-error-border-color: #d9534f; 
+    --result-error-text-color: #f5c6cb;
+
+    --font-family-base: 'Montserrat', sans-serif;
+    --font-size-base: 1rem;
+    --line-height-base: 1.6;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    scroll-padding-top: 1rem; 
+}
+
+body {
+    background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+    font-family: var(--font-family-base);
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px; 
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.container { 
+    flex: 1; 
+    width: 100%;
+    max-width: 800px; 
+    padding: 20px 15px; 
+    margin: 20px auto; 
+    border-radius: 8px; 
+}
+
+.title-card {
+    
+    border-radius: .2rem;
+    padding: 2.5rem;
+    background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+    box-shadow: .1px .1px .1px .1px var(--card-shadow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid var(--card-border-color);
+    margin-bottom: 3rem; 
+    transition: box-shadow .3s ease, transform .3s ease;
+    width:100%;
+}
+
+.title-card:hover {
+
+    transform: translateY(-5px);
+    box-shadow: 0 0 .4rem .4rem var(--card-shadow-color);
+}
+
+
+header h1 {
+    color: var(--primary-highlight-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em; 
+    font-family: 'Playfair Display', serif; 
+    font-weight: 600;
+    letter-spacing:.05rem;
+}
+
+.exercicio { 
+    border-radius: .2rem;
+    padding: 2.5rem;
+    background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+    box-shadow: .1px .1px .1px .1px var(--card-shadow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid var(--card-border-color);
+    margin-bottom: 3rem; 
+    transition: box-shadow .3s ease, transform .3s ease;
+    width:100%;
+}
+
+.exercicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 .4rem .4rem var(--card-shadow-color);
+}
+
+.exercicio h2 { 
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--text-color); 
+    font-family: var(--font-family-base); 
+}
+
+.exercicio p { 
+    font-size: 1rem; 
+    color: var(--text-desc-color);
+    line-height: 1.7;
+    margin-bottom: 1.25rem; 
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500; 
+    color: var(--text-desc-color); 
+    font-size: 0.9em;
+    text-align: left; 
+    width: 100%;
+}
+
+.form-grid {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 1.25rem; 
+    width: 100%;
+}
+
+
+.form-grid input[type="number"],
+.form-grid input[type="text"],
+.exercicio > div > input[type="number"], 
+.exercicio > div > input[type="text"] {
+    width: 100%;
+    padding: .75rem 1rem; 
+    border-radius: .2rem;
+    border: 1px solid var(--input-border-color);
+    font-family: var(--font-family-base);
+    font-size: 1rem; 
+    background: var(--input-bg-color);
+    color: var(--input-text-color);
+    transition: background .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.form-grid input[type="number"]::placeholder,
+.form-grid input[type="text"]::placeholder,
+.exercicio > div > input[type="number"]::placeholder,
+.exercicio > div > input[type="text"]::placeholder {
+    color: var(--text-desc-color);
+    opacity: 0.7;
+}
+
+
+.form-grid input[type="number"]:focus,
+.form-grid input[type="text"]:focus,
+.exercicio > div > input[type="number"]:focus,
+.exercicio > div > input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 .15rem var(--input-focus-shadow-color);
+    background: var(--input-focus-bg-color);
+    border-color: var(--input-focus-border-color);
+}
+
+
+.exercicio > div > input[type="text"],
+.exercicio > div > input[type="number"] {
+    max-width: 300px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block; 
+}
+
+.form-grid-two-cols { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.form-grid-three-cols { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+#titulo-ex1 + p + .form-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+
+
+button { 
+    background-color: var(--button-bg-color);
+    text-decoration: none;
+    color: var(--button-text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: .75rem 1.75rem;
+    border-radius: .2rem;
+    transition: all .3s ease;
+    min-width: 10rem;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover, button:focus {
+    background-color: var(--button-hover-bg-color);
+    box-shadow: 0 0 1rem .4rem var(--button-hover-shadow-color);
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: 3px solid var(--button-focus-outline-color);
+    outline-offset: 3px;
+}
+
+
+.exercicio button {
+    min-width: auto; 
+    padding: .75rem 1.5rem; 
+}
+
+
+.resultado {
+    margin-top: 1.25rem;
+    padding: 1rem;
+    background-color: var(--result-bg-color);
+    border: 1px solid var(--result-border-color);
+    border-radius: .2rem;
+    color: var(--text-desc-color);
+    font-family: var(--font-family-base);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+    word-wrap: break-word;
+    width: 100%; 
+}
+
+.resultado.error-display {
+    background-color: var(--result-error-bg-color);
+    border-left: 5px solid var(--error-color); 
+    border-color: var(--result-error-border-color);
+    color: var(--result-error-text-color);
+}
+
+.resultado strong {
+    color: var(--result-text-strong-color);
+    font-weight: 600;
+}
+
+.resultado.error-display strong {
+    color: var(--result-error-text-color); 
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+    .exercicio {
+        padding: 1.5rem;
+    }
+    .exercicio h2 {
+        font-size: 1.3em;
+    }
+    .form-grid,
+    #titulo-ex1 + p + .form-grid,
+    .form-grid-two-cols,
+    .form-grid-three-cols {
+        grid-template-columns: 1fr;
+    }
+    button {
+        width: 100%;
+        font-size: 1rem;
+        padding: .75rem 1rem;
+    }
+
+}
+@media (max-width:600px){
+    .exercicio{ padding:1.75rem; margin:0 1rem 30px; }
+    .exercicio h2 { font-size: 1.2rem; }
+    .exercicio p { font-size: 0.9rem; }
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; 
+}
